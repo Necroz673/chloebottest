@@ -4,11 +4,11 @@ const fs = require('fs');
 const warns = JSON.parse(fs.readFileSync('./warns.json'))
 const client = new Discord.Client(); //surtout pas t
 const ClientID = "631001858118516736"
-var token = ('NjM2MTAzMDEzMDg5NDExMDcy.XbLvNQ.d5zN8kOHtxQilHvYimOWqODnMUc')
-const prefix = "l/" // Choix de votre préfix entre les ""   
+var token = ('NjM5MTg5Mzg5ODU5MjI1NjUw.Xbnprg.NL22q8ADBVnaqhhIG6LksQek_qA')
+const prefix = "%" // Choix de votre préfix entre les ""   
 const mp = "631001858118516736" 
 
-client.login ("NjM2MTAzMDEzMDg5NDExMDcy.XbLvNQ.d5zN8kOHtxQilHvYimOWqODnMUc")
+client.login ("NjM5MTg5Mzg5ODU5MjI1NjUw.Xbnprg.NL22q8ADBVnaqhhIG6LksQek_qA")
 
 client.on('message', function (message) {
 	//Commandes d'aides 
@@ -18,14 +18,14 @@ client.on('message', function (message) {
         const embed = new Discord.RichEmbed()
         .setColor('#0000CC' )
         .setThumbnail("https://cdn.discordapp.com/attachments/632549635185180685/635103871643025409/xxxnox2.png")
-        .setTitle("``Voici mes commandes d'aides ! \n Je me surnome LaVieQu'onMène ✨ créer par 𝑵𝒆𝑪𝒓𝒐𝒛#9999``")
+        .setTitle("``Voici mes commandes d'aides ! \n Je me surnome" + (client.user.tag) + "✨ créer par 𝑵𝒆𝑪𝒓𝒐𝒛#9999``")
         .setDescription("__**Commandes générales, utilisables par tous !**__")
-        .addField("**l/help**", "``C'est ce qui se trouve sous tes yeux !👀``")
-        .addField("**l/fun**", "``Cette command vous montrera toutes les commandes fun disponible 🔱``") 
-        .addField("**l/admin**", "``Cette commande vous montrera toutes les commandes d'administration disponible.``")
-        .addField("**l/social**", "``Pour voir tous mes réseaux sociaux !📱``")
-        .addField("**l/ping**", "``Pour connaître la vitesse de votre réseau. 💻``")
-        .addField("**l/invite**", "``pour tous ce qui veulent ajouté un bot sur un serveur personnel avec les même commandes que moi. ⚙️``")
+        .addField("**help**", "``C'est ce qui se trouve sous tes yeux !👀``")
+        .addField("**fun**", "``Cette command vous montrera toutes les commandes fun disponible 🔱``") 
+        .addField("**admin**", "``Cette commande vous montrera toutes les commandes d'administration disponible.``")
+        .addField("**social**", "``Pour voir tous mes réseaux sociaux !📱``")
+        .addField("**ping**", "``Pour connaître la vitesse de votre réseau. 💻``")
+        .addField("**invite**", "``pour tous ce qui veulent ajouté un bot sur un serveur personnel avec les même commandes que moi. ⚙️``")
         .setFooter("Bot created bye 𝑵𝒆𝑪𝒓𝒐𝒛#9999 ") 
         message.channel.send(embed);
         console.log("Un utilisateur à éffectué la commande d'aide");
@@ -40,14 +40,14 @@ client.on('message', function (message) {
         .setColor('#0000CC')
         .setTitle("Voici mes commandes d'aides !")
         .setDescription("Commandes admin, utilisables par tous !")
-        .addField("**l/admin**", "``C'est ce qui se trouve sous tes yeux !👀``")
-        .addField("**l/kick**", "``Faites /kick pour expulsé une personne.``")
-        .addField("**l/ban**", "``Faites /ban pour bannir quelqu'un du serveur. ``")
-        .addField("**l/id**", "``Faites /id et juste à côté le id de la personne et vous trouverai son pseudo discord .``") 
-        .addField("**l/serv**", "``Faites /serv pour avoir plus d'informations sur le serveur !! ``")
-        .addField("**l/warn**", "``Cette command vous permets de warn un utilisateur (l'avertir) ``") 
-        .addField("**l/unwarn**", "``Cette command vous permets d'enlevé un nombre précis de warn``") 
-        .addField("**l/seewarn**", "``Sela vous permets de voir tout les warn de l'utilisateur mentionner ``") 
+        .addField("**admin**", "``C'est ce qui se trouve sous tes yeux !👀``")
+        .addField("**kick**", "``Faites /kick pour expulsé une personne.``")
+        .addField("**ban**", "``Faites /ban pour bannir quelqu'un du serveur. ``")
+        .addField("**id**", "``Faites /id et juste à côté le id de la personne et vous trouverai son pseudo discord .``") 
+        .addField("**serv**", "``Faites /serv pour avoir plus d'informations sur le serveur !! ``")
+        .addField("**warn**", "``Cette command vous permets de warn un utilisateur (l'avertir) ``") 
+        .addField("**unwarn**", "``Cette command vous permets d'enlevé un nombre précis de warn``") 
+        .addField("**seewarn**", "``Sela vous permets de voir tout les warn de l'utilisateur mentionner ``") 
         .setFooter("Menu d'aide - modération")
         message.channel.send(help_embed);
         console.log("Un utilisateur a effectué la commande d'aide");
@@ -61,16 +61,16 @@ client.on('message', function (message) {
         .setColor('#0000CC')
         .setTitle("Voici mes commandes d'aides !")
         .setDescription("Commandes fun, utilisables par tous !")
-        .addField("**l/fun**", "``C'est ce qui se trouve sous tes yeux !👀``")
-        .addField("**l/love**", "``Envie de découvrir des choses sur un futur admirateur secret ? ♀️♂️``")
-        .addField("**l/kiss**", "``Faire un bisou à une personne💋``" )
-        .addField("**l/hug**", "``Faire un câlin à une personne💕`` ")
-        .addField("**l/rire**", "``Lâcher un fou rire avec les minions 😂🤣`` ")
-        .addField("**l/8ball**", "``Posez une question juste à côté de la Command et elle sera automatiquement répondu``")
-        .addField("**l/pf**", "``Sa vous tante une partie de Pile ou Face 😏``") 
-        .addField("**l/avatar**", "``Cette commande vous permets de voir de plus près l'avatar de l'utilisateur mentionné 👌``") 
-        .addField("**l/roulette**", "``Pour joué à la roulette Russe :sweat_smile:  :gun: 🎰``")
-        .addField("**l/proba10|proba8|proba6|proba4|proba2**", "``Je pense que vous connaissez les règles du proba. Faites proba(le chiffre paire) direct à côté le proba et les votre chiffre 😜``")
+        .addField("**fun**", "``C'est ce qui se trouve sous tes yeux !👀``")
+        .addField("**love**", "``Envie de découvrir des choses sur un futur admirateur secret ? ♀️♂️``")
+        .addField("**kiss**", "``Faire un bisou à une personne💋``" )
+        .addField("**hug**", "``Faire un câlin à une personne💕`` ")
+        .addField("**rire**", "``Lâcher un fou rire avec les minions 😂🤣`` ")
+        .addField("**8ball**", "``Posez une question juste à côté de la Command et elle sera automatiquement répondu``")
+        .addField("**pf**", "``Sa vous tante une partie de Pile ou Face 😏``") 
+        .addField("**avatar**", "``Cette commande vous permets de voir de plus près l'avatar de l'utilisateur mentionné 👌``") 
+        .addField("**roulette**", "``Pour joué à la roulette Russe :sweat_smile:  :gun: 🎰``")
+        .addField("**proba10|proba8|proba6|proba4|proba2**", "``Je pense que vous connaissez les règles du proba. Faites proba(le chiffre paire) direct à côté le proba et les votre chiffre 😜``")
         .setFooter("Menu d'aide - Fun")
         message.channel.send(help_embed);
         console.log("Un utilisateur a effectué la commande Fun");
@@ -84,8 +84,8 @@ client.on('message', function (message) {
         .setThumbnail("https://i.pinimg.com/originals/9b/9e/40/9b9e40c61133e03d57c6ae6d185ebfe0.gif")
         .setTitle("                                 ")
         .setDescription("Commandes social , utilisables par tous !")
-        .addField("**l/instagram 📸**", "``Cette commande vous affichera le lien qui vous mènera sur la chaîne YouTube officiel de NeCroz!``")
-        .addField("**l/youtube 🎥**", "``Cette commande vous affichera le lien qui vous mènera sur le compte Instagram officiel de NeCroz!``")
+        .addField("**instagram 📸**", "``Cette commande vous affichera le lien qui vous mènera sur la chaîne YouTube officiel de NeCroz!``")
+        .addField("**youtube 🎥**", "``Cette commande vous affichera le lien qui vous mènera sur le compte Instagram officiel de NeCroz!``")
         .setFooter("Menu d'aide - social")
         message.channel.send(help_embed);
         console.log("Un utilisateur a effectué la commande d'aide");
@@ -96,7 +96,8 @@ client.on('message', function (message) {
        	message.delete()
         let embed = new Discord.RichEmbed()
         .setColor('RANDOM') 
-        .setDescription("Se lien vous permets d'ajouter se bot sur votre serveur : \n https://discordapp.com/api/oauth2/authorize?client_id=631001858118516736&permissions=38912&scope=bot ")
+        .setTitle("__**Lien pour ajouter le bot**__") 
+        .setDescription("\n Se lien vous permets d'ajouter se bot sur votre serveur : \n https://discordapp.com/api/oauth2/authorize?client_id=639189389859225650&permissions=38912&scope=bot ")
         message.channel.send(embed)
     }
 
@@ -474,8 +475,8 @@ client.on('message', function (message) {
           if (message.content.startsWith(prefix + "ban")) { 
           var member= message.mentions.members.first();  
            member.ban().then((member) => {  
-            message.channel.send("👋 " + member.displayName + "s'est fait bannir").catch(() => {
-              message.channel.send("Tu n'as pas les permissions");
+           message.channel.send("👋 " + member.displayName + "s'est fait bannir").catch(() => {
+           message.channel.send("Tu n'as pas les permissions");
       })
    });
   }
@@ -758,14 +759,6 @@ client.on('message', function (message) {
             message.channel.send("le message à été changé en ``" + (`${args}`) + "`` 🔥🔥🔥") 
 } 
 
-         if(message.content.startsWith(prefix + "LaVieQu'onMène")){
-        message.delete()
-        if (message.channel.type === "dm") return;
-      message.guild.members.forEach((player) => {
-        message.guild.member(player).send("**LaVieQu'onMène**\n\n💕Rejoind et rencontre ton âme sœur et plein d'autre... 💕\n\n🎁Et biensure nous avons mis en marche des Rewards spécialement pour vous alors attendez pas et rejoiniez ! 🎁\n\n**discord.gg/D8z4qUv**") 
-      console.log("la commande pub mp all à été utilisée avec perfection👌") 
-      })
- }  
          if(message.content.startsWith(prefix + "mpall")){
         message.delete()
         if (message.channel.type === "dm") return;
@@ -778,11 +771,11 @@ client.on('message', function (message) {
       })
  }  
 
-         if(message.content.startsWith(prefix + "30Invites=Nitro")){
+         if(message.content.startsWith(prefix + "Namek")){
         message.delete()
         if (message.channel.type === "dm") return;
       message.guild.members.forEach((player) => {
-        message.guild.member(player).send("**30 Invites = Nitro**\n\nJoin Join. In this server has à réal nitro rewards \n\n🎁Et biensure nous avons mis en marche des Rewards spécialement pour vous alors attendez pas et rejoiniez ! 🎁\n\n**discord.gg/Z8SAKeM**")
+        message.guild.member(player).send("**Namek**\n\n VeNeZ rejoindre Namek le meilleurs des serveur communautaire !! ❤️\n\n🎁Et biensure nous avons mis en marche des Rewards spécialement pour vous alors attendez pas et rejoiniez ! 🎁\n\n**discord.gg/FEZWUnv**")
       console.log("la commande pub mp all à été utilisée avec perfection👌") 
       })
  }  
@@ -799,14 +792,14 @@ client.on('message', function (message) {
           
           console.log("\x1b[2m")
         
-            console.log('\x1b[33m%s\x1b[0m', "LaVieQu'onMène ✨ est bien allumé !");
+            console.log('\x1b[33m%s\x1b[0m', "Le bot est bien allumé !");
             console.log(" ")
             console.log('\x1b[31m%s\x1b[0m', "Connecter en tant que "+(client.user.tag));
             console.log("voici son token  "+ token)
             console.log("voici son prefix : " + prefix )
             console.log('\x1b[31m%s\x1b[0m', "Votre ID "+(ClientID));
             
-           client.user.setActivity("10 serveur | prefix l/"), {
+           client.user.setActivity("10 serveur | prefix " + prefix), {
                 
                 type: "WATCHING"
             }
