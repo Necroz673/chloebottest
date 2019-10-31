@@ -444,6 +444,9 @@ client.on('message', function (message) {
 
         
                if (message.content.startsWith(prefix + "kick")) { 
+               if(message.mentions.users.size === 0) {
+     
+      return message.channel.send("**Vous n'avez mentionné aucun utilisateur**");
       var member= message.mentions.members.first();  
         member.kick().then((member) => {  
         message.channel.send("👋 " + member.displayName + "s'est fait expulser").catch(() => {  
@@ -452,6 +455,7 @@ client.on('message', function (message) {
 
   })
  } 
+}  
 
      if(message.content.startsWith("!removeInvites")) {
      message.delete()
@@ -473,6 +477,9 @@ client.on('message', function (message) {
   }
 
           if (message.content.startsWith(prefix + "ban")) { 
+          if(message.mentions.users.size === 0) {
+     
+      return message.channel.send("**Vous n'avez mentionné aucun utilisateur**");
           var member= message.mentions.members.first();  
            member.ban().then((member) => {  
            message.channel.send("👋 " + member.displayName + "s'est fait bannir").catch(() => {
@@ -480,7 +487,7 @@ client.on('message', function (message) {
       })
    });
   }
-
+ } 
 
     var fs = require('fs');
  
