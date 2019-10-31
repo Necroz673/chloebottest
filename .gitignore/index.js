@@ -48,6 +48,7 @@ client.on('message', function (message) {
         .addField("**warn**", "``Cette command vous permets de warn un utilisateur (l'avertir) ``") 
         .addField("**unwarn**", "``Cette command vous permets d'enlevé un nombre précis de warn``") 
         .addField("**seewarn**", "``Sela vous permets de voir tout les warn de l'utilisateur mentionner ``") 
+        .addField("**mpall**", "``Sela vous permets de mp all tout le serveur avec un message personnel ``") 
         .setFooter("Menu d'aide - modération")
         message.channel.send(help_embed);
         console.log("Un utilisateur a effectué la commande d'aide");
