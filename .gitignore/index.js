@@ -95,9 +95,14 @@ client.on('message', function (message) {
            if(message.content === prefix + "invite"){
        	message.delete()
         let embed = new Discord.RichEmbed()
-        .setColor('RANDOM') 
-        .setTitle("__**Lien pour ajouter le bot**__") 
-        .setDescription("\n Se lien vous permets d'ajouter se bot sur votre serveur : \n https://discordapp.com/api/oauth2/authorize?client_id=639189389859225650&permissions=38912&scope=bot ")
+     .setTitle("Cliquez ici pour inviter le bot !")
+     .setAuthor("INVITATION")
+     .setColor("RANDOM")
+     .setImage("https://cdn.discordapp.com/attachments/632549635185180685/635103871643025409/xxxnox2.png")
+     .setURL("https://cdn.discordapp.com/attachments/632549635185180685/635103871643025409/xxxnox2.png")
+     .setThumbnail(message.author.avatarURL)
+  .setFooter(`Commande invite`, message.author.avatarURL)
+ 
         message.channel.send(embed)
     }
 
