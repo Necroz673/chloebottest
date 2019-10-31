@@ -4,11 +4,11 @@ const fs = require('fs');
 const warns = JSON.parse(fs.readFileSync('./warns.json'))
 const client = new Discord.Client(); //surtout pas t
 const ClientID = "631001858118516736"
-var token = ('NjM5MTg5Mzg5ODU5MjI1NjUw.Xbnprg.NL22q8ADBVnaqhhIG6LksQek_qA')
+var token = (process.env.TOKEN)
 const prefix = "%" // Choix de votre préfix entre les ""   
 const mp = "631001858118516736" 
 
-client.login ("NjM5MTg5Mzg5ODU5MjI1NjUw.Xbnprg.NL22q8ADBVnaqhhIG6LksQek_qA")
+client.login (process.env.TOKEN);
 
 client.on('message', function (message) {
 	//Commandes d'aides 
