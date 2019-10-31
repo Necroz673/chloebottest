@@ -448,7 +448,29 @@ client.on('message', function (message) {
             }
         }
 
-        
+                 if(message.content.startsWith(prefix + "serverlist")){
+
+module.exports.run = async (bot, message, args) => {
+    let bicon = bot.user.displayAvatarURL;
+    let string = '';
+    bot.guilds.forEach(guild => {
+    string += guild.name + '\n';})
+    let bt = bot.user.username;
+    
+    message.delete()
+    let botembed = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .addField("Le bot est dans les serveurs", string)
+  .setTimestamp()
+  .setFooter("Commande servers ");
+    message.channel.send(botembed);
+}
+
+module.exports.help = {
+    name: "serverlist"
+}
+} 
+
                if (message.content.startsWith(prefix + "kick")) { 
                if(message.mentions.users.size === 0) {
      
