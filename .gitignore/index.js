@@ -813,7 +813,7 @@ client.on('message', function (message) {
             console.log("voici son prefix : " + prefix )
             console.log('\x1b[31m%s\x1b[0m', "Votre ID "+(ClientID));
             
-           client.user.setActivity("%help | ${client.guilds.size} serveur" ), {
+           client.user.setActivity(`%help | ${client.guilds.size} serveur`), {
                 
                 type: "WATCHING"
             }
