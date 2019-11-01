@@ -24,7 +24,7 @@ client.on('message', function (message) {
         .addField("**fun**", "``Cette command vous montrera toutes les commandes fun disponible 🔱``") 
         .addField("**admin**", "``Cette commande vous montrera toutes les commandes d'administration disponible.``")
         .addField("**social**", "``Pour voir tous mes réseaux sociaux !📱``")
-        .addField("**ping**", "``Pour connaître la vitesse de l'hébergeur de " + (client.uset.tag) +" . 💻``")
+        .addField("**ping**", "``Pour connaître la vitesse de l'hébergeur de " + (client.user.tag) +" . 💻``")
         .addField("**invite**", "``pour tous ce qui veulent ajouté un bot sur un serveur personnel avec les même commandes que moi. ⚙️``")
         .setFooter("Bot created bye 𝑵𝒆𝑪𝒓𝒐𝒛#9999 ") 
         message.channel.send(embed);
