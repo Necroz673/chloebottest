@@ -18,7 +18,7 @@ client.on('message', function (message) {
         const embed = new Discord.RichEmbed()
         .setColor('#0000CC' )
         .setThumbnail("https://cdn.discordapp.com/attachments/632549635185180685/635103871643025409/xxxnox2.png")
-        .setTitle("``Voici mes commandes d'aides ! \n Je me surnome" + (client.user.tag) + "✨ créer par 𝑵𝒆𝑪𝒓𝒐𝒛#9999``")
+        .setTitle("``Voici mes commandes d'aides ! \n Je me surnomme " + (client.user.tag) + "✨ créer par 𝑵𝒆𝑪𝒓𝒐𝒛#9999``")
         .setDescription("__**Commandes générales, utilisables par tous !**__")
         .addField("**help**", "``C'est ce qui se trouve sous tes yeux !👀``")
         .addField("**fun**", "``Cette command vous montrera toutes les commandes fun disponible 🔱``") 
