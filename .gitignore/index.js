@@ -822,7 +822,4 @@ module.exports.help = {
             console.log('\x1b[31m%s\x1b[0m', "Votre ID "+(ClientID));
             
            client.user.setActivity(`%help | Support ${client.guilds.size} serveur`), {
-                
-                type: "WATCHING"
-            }
 });
