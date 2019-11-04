@@ -221,6 +221,24 @@ client.on('message', function (message) {
                 message.channel.send("Si vous voulez que la boule magique vous réponde, vous devez déjà poser la question !")
             }
         }
+
+                       if (message.content.startsWith(prefix + "punch")) {
+            var punch = [
+                "https://cdn.weeb.sh/images/HkFlwpZZf.gif",
+                "https://cdn.weeb.sh/images/HJfGPTWbf.gif",
+                "https://cdn.weeb.sh/images/HykeDaZWf.gif",
+                "https://cdn.weeb.sh/images/ryYo_6bWf.gif"
+            ];
+            var gif = punch[Math.floor(Math.random() * punch.length)];
+            var punch_embed = new Discord.RichEmbed()
+                .setColor('RANDOM')
+                .setTitle(`Tu viens de donné un coup de poin 🥊:`)
+                .setImage(gif)
+                .setTimestamp()
+                .setFooter("NeCroz")
+            message.channel.send(punch_embed);
+
+       } 
                       if (message.content.startsWith(prefix + 'ping')) {
             message.channel.send('Pong! ping :`' + `${Date.now() - message.createdTimestamp}` + ' ms`');
        }   
