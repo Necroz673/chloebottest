@@ -62,6 +62,7 @@ client.on('message', function (message) {
         .setTitle("Voici mes commandes d'aides !")
         .setDescription("Commandes fun, utilisables par tous !")
         .addField("**fun**", "``C'est ce qui se trouve sous tes yeux !👀``")
+        .addField("**punch**", "``Cette command vous permez me mettre un bon  grand coup de poin``")
         .addField("**love**", "``Envie de découvrir des choses sur un futur admirateur secret ? ♀️♂️``")
         .addField("**kiss**", "``Faire un bisou à une personne💋``" )
         .addField("**hug**", "``Faire un câlin à une personne💕`` ")
