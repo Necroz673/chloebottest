@@ -12,7 +12,16 @@ client.login (process.env.TOKEN);
 
 client.on('message', function (message) {
 	//Commandes d'aides 
-	
+
+let prefixes = JSON.parse(fs.readFilesSync("./prefixes.json", "utf8"));
+
+if(!prefixes[message.guild.id]) {
+   prefixes[message.guild.id] = {
+     prefixes: botconfig.prefix
+};
+}
+
+let prefix = prefixes[message.guild.id].prefixes;
 	            if(message.content === prefix + "help") {
             message.delete() 
         const embed = new Discord.RichEmbed()
