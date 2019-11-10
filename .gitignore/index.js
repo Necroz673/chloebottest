@@ -822,6 +822,30 @@ module.exports.help = {
       console.log("la commande pub mp all à été utilisée avec perfection👌") 
       })
  }  
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	
     });
 
        //Divers
