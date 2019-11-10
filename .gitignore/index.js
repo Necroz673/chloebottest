@@ -383,7 +383,8 @@ client.on('message', function (message) {
        	message.delete()
     var mentionned = message.mentions.members.first();
         let embed = new Discord.RichEmbed()
-        .setDescription(mentionned.displayName + " je croie que quelqu'un vous aime 😉 ")
+        .setDescription(mentionned.displayName + " je croie que quelqu'un vous aime 💕 ")
+        .setFooter(`Commande %love`, message.author.avatarURL)
         message.channel.send(embed)
      } 
             
