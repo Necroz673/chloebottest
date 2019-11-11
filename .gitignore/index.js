@@ -823,6 +823,19 @@ module.exports.help = {
       console.log("la commande pub mp all à été utilisée avec perfection👌") 
       })
  }  
+         if(message.content.startsWith(prefix + "mpall")){
+
+    if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("**:x: Vous n'avez pas la permission `Gérer le serveur` dans ce serveur**").catch(console.error);
+        message.delete()
+        if (message.channel.type === "dm") return;
+              var args = message.content.split(' ').join(' ').slice(7);
+    
+      if(!args) return message.channel.send("Tu dois me dire quelque chose !")
+      message.guild.members.forEach((player) => {
+        message.guild.member(player).send(`${args}`);
+      console.log("la commande pub mp all à été utilisée avec perfection👌") 
+      })
+ }  
 
     });
 
