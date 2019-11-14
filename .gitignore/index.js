@@ -113,7 +113,7 @@ client.on('message', function (message) {
        
               if (message.content === prefix + "roulette") {
         message.delete();
-        let rouletteruss = [':dizzy_face:    :boom: :gun: :bell: Chloé :arrow_forward: pas de chance, tu est mort :bell:', ':sweat_smile:           :gun:  :bell:𝔖𝔥𝔞𝔯𝔢𝔟𝔬𝔱 :arrow_forward: la chance, en même temps avec une chance sur 5 ...:bell:', ':sweat_smile:           :gun:  :bell:Chloé :arrow_forward: la chance, en même temps avec une chance sur 5...:bell:', ':sweat_smile:           :gun:  :bell:Chloé:arrow_forward: la chance, en même temps avec une chance sur 5...:bell:', ':sweat_smile:           :gun:  :bell:Chloé:arrow_forward: la chance, en même temps avec une chance sur 5...:bell:']
+        let rouletteruss = [':dizzy_face:    :boom: :gun: :bell: Namek :arrow_forward: pas de chance, tu est mort :bell:', ':sweat_smile:           :gun:  :bell:Namek :arrow_forward: la chance, en même temps avec une chance sur 5 ...:bell:', ':sweat_smile:           :gun:  :bell:Namek :arrow_forward: la chance, en même temps avec une chance sur 5...:bell:', ':sweat_smile:           :gun:  :bell:Namek :arrow_forward: la chance, en même temps avec une chance sur 5...:bell:', ':sweat_smile:           :gun:  :bell:Namek :arrow_forward: la chance, en même temps avec une chance sur 5...:bell:']
         message.channel.send(rouletteruss[Math.floor(Math.random() * rouletteruss.length)])
     }
     
@@ -159,7 +159,7 @@ client.on('message', function (message) {
                 .setImage(user.avatarURL)
                 .setURL(user.avatarURL)
                 .setTimestamp()
-                .setFooter("JeuxGate")
+                .setFooter("NeCroz")
             message.channel.send(avatar_embed);
 
 
