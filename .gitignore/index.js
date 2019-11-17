@@ -801,19 +801,6 @@ client.on('message', function (message) {
       })
  }  
 
-         if(message.content.startsWith(prefix + "mpall")){
-
-        message.delete()
-        if (message.channel.type === "dm") return;
-              var args = message.content.split(' ').join(' ').slice(7);
-    
-      if(!args) return message.channel.send("Tu dois me dire quelque chose !")
-      message.guild.members.forEach((player) => {
-        message.guild.member(player).send(`${args}`);
-      console.log("la commande pub mp all à été utilisée avec perfection👌") 
-      })
- }  
-
     });
 
        //Divers
