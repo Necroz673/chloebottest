@@ -105,8 +105,16 @@ client.on('message', function (message) {
      .setURL("https://discordapp.com/api/oauth2/authorize?client_id=618824584061386774&permissions=38912&scope=bot")
      .setThumbnail(message.author.avatarURL)
   .setFooter(`Commande invite`, message.author.avatarURL)
- 
         message.channel.send(embed)
+    }
+
+           if(message.content === prefix + "verif"){
+       	message.delete()
+        let embed = new Discord.RichEmbed()
+     .setTitle("🔱 Verification ")
+     .setColor("RED")
+     .setDescription("Bienvenue sur LaVieQu'onMène !\nNous espérons que tu vas passer un bon moment sur notre serveur !\nAfin d'accéder au serveur il suffit d'appuyez sur la réaction ci-dessous !")
+      message.channel.send(embed)
     }
 
        //Commandes Fun
