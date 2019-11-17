@@ -392,11 +392,6 @@ client.on('message', function (message) {
             
       //Social
      
-           if(message.content.startsWith(prefix + "free")) {
-         let embed = new Discord.RichEmbed()
-           	message.channel.send("voici le lien qui te permettra de me soutenir gratuitement ❤️ : **https://www.clictune.com/7APD**" ) 
-          } 
-     
                   if(message.content.startsWith(prefix + "don")) {
              message.delete()
          let embed = new Discord.RichEmbed()
