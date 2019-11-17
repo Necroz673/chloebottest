@@ -226,6 +226,7 @@ client.on('message', function (message) {
         }
 
                        if (message.content.startsWith(prefix + "punch")) {
+      var args = message.content.split(' ').join(' ').slice(7);
             var punch = [
                 "https://cdn.weeb.sh/images/HkFlwpZZf.gif",
                 "https://cdn.weeb.sh/images/HJfGPTWbf.gif",
@@ -235,7 +236,7 @@ client.on('message', function (message) {
             var gif = punch[Math.floor(Math.random() * punch.length)];
             var punch_embed = new Discord.RichEmbed()
                 .setColor('RANDOM')
-                .setTitle(`Tu viens de donné un coup de poin 🥊:`)
+                .setTitle(`Tu viens de donné un coup de poin à `) + (`${args}`) + (` 🥊:`)
                 .setImage(gif)
                 .setTimestamp()
                 .setFooter("NeCroz")
