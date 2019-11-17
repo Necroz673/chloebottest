@@ -112,8 +112,8 @@ client.on('message', function (message) {
        	message.delete()
         let embed = new Discord.RichEmbed()
      .setTitle("🔱 Verification ")
-     .setColor("RED")
-     .setDescription("Bienvenue sur LaVieQu'onMène !\nNous espérons que tu vas passer un bon moment sur notre serveur !\nAfin d'accéder au serveur il suffit d'appuyez sur la réaction ci-dessous !")
+     .setColor('#ff0000')
+     .setDescription("```Bienvenue sur LaVieQu'onMène !\nNous espérons que tu vas passer un bon moment sur notre serveur !\nAfin d'accéder au serveur il suffit d'appuyez sur la réaction ci-dessous !```")
       message.channel.send(embed)
     }
 
