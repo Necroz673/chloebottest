@@ -108,14 +108,6 @@ client.on('message', function (message) {
         message.channel.send(embed)
     }
 
-           if(message.content === prefix + "verif"){
-       	message.delete()
-        let embed = new Discord.RichEmbed()
-     .setTitle("🔱 Verification ")
-     .setColor('#ff0000')
-     .setDescription("```Bienvenue sur LaVieQu'onMène !\nNous espérons que tu vas passer un bon moment sur notre serveur !\nAfin d'accéder au serveur il suffit d'appuyez sur la réaction ci-dessous !```")
-      message.channel.send(embed)
-    }
 
        //Commandes Fun
        
@@ -246,7 +238,7 @@ client.on('message', function (message) {
             var gif = punch[Math.floor(Math.random() * punch.length)];
             var punch_embed = new Discord.RichEmbed()
                 .setColor('RANDOM')
-                .setTitle(`Tu viens de donné un coup de poin à `) + (`${args}`) + (` 🥊:`)
+                .setTitle(`Tu viens de donné un coup de poin à `) + (`${args}`) + (` 🥊:`);
                 .setImage(gif)
                 .setTimestamp()
                 .setFooter("NeCroz")
