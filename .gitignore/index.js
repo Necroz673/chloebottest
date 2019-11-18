@@ -235,6 +235,8 @@ client.on('message', function (message) {
 
                        if (message.content.startsWith(prefix + "punch")) {
       var args = message.content.split(' ').join(' ').slice(7);
+
+      if(!args) return message.channel.send("Tu doit me dire à qui tu done le coup !")
             var punch = [
                 "https://cdn.weeb.sh/images/HkFlwpZZf.gif",
                 "https://cdn.weeb.sh/images/HJfGPTWbf.gif",
