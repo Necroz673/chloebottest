@@ -226,9 +226,6 @@ client.on('message', function (message) {
         }
 
                        if (message.content.startsWith(prefix + "punch")) {
-      var args = message.content.split(' ').join(' ').slice(7);
-
-      if(!args) return message.channel.send("Tu doit me dire à qui tu done le coup !")
             var punch = [
                 "https://cdn.weeb.sh/images/HkFlwpZZf.gif",
                 "https://cdn.weeb.sh/images/HJfGPTWbf.gif",
@@ -238,7 +235,7 @@ client.on('message', function (message) {
             var gif = punch[Math.floor(Math.random() * punch.length)];
             var punch_embed = new Discord.RichEmbed()
                 .setColor('RANDOM')
-                .setTitle(`Tu viens de donné un coup de poin à `) + (`${args}`) + (` 🥊:`);
+                .setTitle(`Tu viens de donné un coup de poin🥊:`);
                 .setImage(gif)
                 .setTimestamp()
                 .setFooter("NeCroz")
