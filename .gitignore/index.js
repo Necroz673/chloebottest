@@ -430,7 +430,7 @@ client.on('message', function (message) {
               client.guilds.get("481105805161005066").channels.get("488344143047819282").send(clear_embed)
               console.log("Un modo a supprimé des msg !")
           });
-        });
+        })
     }
     
             if (message.content.startsWith(prefix + "id")) {
