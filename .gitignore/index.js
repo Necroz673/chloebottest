@@ -118,6 +118,11 @@ client.on('message', function (message) {
     }
     
                if (message.content.startsWith(prefix + "kiss")) {
+               if (message.guild.member(message.mentions.users.first())) {
+                var user = message.mentions.users.first()
+            } else {
+                var user = message.author
+            }
             var kiss = [
                 "https://media.giphy.com/media/KH1CTZtw1iP3W/giphy.gif",
                 "https://media.giphy.com/media/wOtkVwroA6yzK/giphy.gif",
@@ -127,7 +132,7 @@ client.on('message', function (message) {
             var gif = kiss[Math.floor(Math.random() * kiss.length)];
             var kiss_embed = new Discord.RichEmbed()
                 .setColor('RANDOM')
-                .setTitle(`Tu viens d'embrasser :`)
+                .setTitle(`Tu viens d'embrasser ` + user.username + ` : `) 
                 .setImage(gif)
                 .setTimestamp()
                 .setFooter("NeCroz")
