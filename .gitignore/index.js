@@ -118,10 +118,11 @@ client.on('message', function (message) {
     }
     
                if (message.content.startsWith(prefix + "kiss")) {
+    var mentionned = message.mentions.members.first();
                if (message.guild.member(message.mentions.users.first())) {
                 var user = "Clara ❤️"
             } else {
-                var user = message.author
+                var user = mentionned.displayName
             }
             var kiss = [
                 "https://media.giphy.com/media/KH1CTZtw1iP3W/giphy.gif",
@@ -173,10 +174,11 @@ client.on('message', function (message) {
        
         
                 if (message.content.startsWith(prefix + "hug")) {
+    var mentionned = message.mentions.members.first();
        if (message.guild.member(message.mentions.users.first())) {
                 var user = "Clara ❤️"
             } else {
-                var user = message.author
+                var user = mentionned.displayName
             }
             var hug = [
                 "https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif",
