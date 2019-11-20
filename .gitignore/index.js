@@ -154,7 +154,7 @@ client.on('message', function (message) {
        
        if (message.content.startsWith(prefix + "avatar")) {
             if (message.guild.member(message.mentions.users.first())) {
-                var user = message.mentions.users.first()
+                var user = "Clara❤️" 
             } else {
                 var user = message.author
             }
