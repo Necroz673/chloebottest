@@ -5,8 +5,8 @@ const warns = JSON.parse(fs.readFileSync('./warns.json'))
 const client = new Discord.Client(); //surtout pas t
 const ClientID = "631001858118516736"
 var token = (process.env.TOKEN)
-const prefix = "%" // Choix de votre préfix entre les ""   
-const mp = "631001858118516736" 
+const prefix = "'" // Choix de votre préfix entre les ""   
+const mp = "646407771356659724" 
 
 client.login (process.env.TOKEN);
 
@@ -102,7 +102,7 @@ client.on('message', function (message) {
      .setAuthor("INVITATION")
      .setColor("RANDOM")
      .setImage("https://cdn.discordapp.com/attachments/632549635185180685/635103871643025409/xxxnox2.png")
-     .setURL("https://discordapp.com/api/oauth2/authorize?client_id=618824584061386774&permissions=38912&scope=bot")
+     .setURL("https://discordapp.com/api/oauth2/authorize?client_id=646407771356659724&permissions=38912&scope=bot")
      .setThumbnail(message.author.avatarURL)
   .setFooter(`Commande invite`, message.author.avatarURL)
         message.channel.send(embed)
