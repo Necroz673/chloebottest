@@ -5,7 +5,7 @@ const warns = JSON.parse(fs.readFileSync('./warns.json'))
 const client = new Discord.Client(); //surtout pas t
 const ClientID = "631001858118516736"
 var token = (process.env.TOKEN)
-const prefix = "'" // Choix de votre préfix entre les ""   
+const prefix = "%" // Choix de votre préfix entre les ""   
 const mp = "646407771356659724" 
 
 client.login (process.env.TOKEN);
@@ -119,7 +119,7 @@ client.on('message', function (message) {
     
                if (message.content.startsWith(prefix + "kiss")) {
                if (message.guild.member(message.mentions.users.first())) {
-                var user = message.mentions.users.first()
+                var user = "Clara ❤️"
             } else {
                 var user = message.author
             }
@@ -173,6 +173,11 @@ client.on('message', function (message) {
        
         
                 if (message.content.startsWith(prefix + "hug")) {
+       if (message.guild.member(message.mentions.users.first())) {
+                var user = "Clara ❤️"
+            } else {
+                var user = message.author
+            }
             var hug = [
                 "https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif",
                 "https://media.giphy.com/media/5eyhBKLvYhafu/giphy.gif",
@@ -182,7 +187,7 @@ client.on('message', function (message) {
             var gif = hug[Math.floor(Math.random() * hug.length)];
             var hug_embed = new Discord.RichEmbed()
                 .setColor('RANDOM')
-                .setTitle(`Tu viens de faire un câlin :`)
+                .setTitle(`Tu viens de faire un câlin à ` + user.username + ` : `)
                 .setImage(gif)
                 .setTimestamp()
                 .setFooter("NeCroz")
