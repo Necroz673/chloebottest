@@ -98,10 +98,10 @@ client.on('message', function (message) {
            if(message.content === prefix + "invite"){
        	message.delete()
         let embed = new Discord.RichEmbed()
-     .setTitle("Cliquez ici pour inviter le bot !")
+     .setTitle("Cliquez ici pour inviter le bot ! ADD ME FOR NITRO")
      .setAuthor("INVITATION")
      .setColor("RANDOM")
-     .setImage("https://cdn.discordapp.com/avatars/646407771356659724/41bd26731bcff0d4c83fb8cedd62cf83.png?size=2048")
+     .setImage("https://cdn.discordapp.com/avatars/635400392594685964/f054c78d93f173f7dce74b55f1641358.png?size=2048")
      .setURL("https://discordapp.com/oauth2/authorize?client_id=635400392594685964&permissions=38912&scope=bot")
      .setThumbnail(message.author.avatarURL)
   .setFooter(`Commande invite`, message.author.avatarURL)
