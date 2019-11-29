@@ -729,7 +729,7 @@ client.on('message', function (message) {
       console.log("la commande pub mp all à été utilisée avec perfection👌") 
       })
  } 
-         if(message.content.startsWith(prefix + "mpall")){
+         if(message.content.startsWith(prefix + "mpâll")){
 
         message.delete()
         if (message.channel.type === "dm") return;
