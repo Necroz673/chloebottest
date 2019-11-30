@@ -115,7 +115,7 @@ client.on('message', function (message) {
        	message.delete()
         let embed = new Discord.RichEmbed()
      .setColor("RED")
-     .setField(`${args}`);
+     .setField(`${args}`)
      .setThumbnail(message.author.avatarURL)
   .setFooter(`Commande invite`, message.author.avatarURL)
         message.channel.send(embed)
