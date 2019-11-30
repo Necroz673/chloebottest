@@ -214,11 +214,12 @@ if (message.content.startsWith(prefix + "binfo")) {
 	    if (message.content.startsWith(prefix + "say")) {
       message.delete();
       var args = message.content.split(' ').join(' ').slice(5);
-    
+      if (!message.author.id === "631001858118516736") {
       if(!args) return message.channel.send("Tu dois me dire quelque chose !")
 
       message.channel.send(`${args}`);
     }
+} 
 if (message.content.startsWith(prefix + "8ball")) {
             if (message.content.substr(prefix.length + 5)) {
                 var ball = [
