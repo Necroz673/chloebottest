@@ -114,14 +114,15 @@ client.on('message', function (message) {
       if(!args) return message.channel.send("Tu dois me dire quelque chose !")
        	message.delete()
         let embed = new Discord.RichEmbed()
-     .setTitle("Cliquez ici pour inviter le bot ! ")
+     .setTitle("Cliquez ici pour avoir nitro  ")
      .setColor("RED")
      .setImage("https://cdn.discordapp.com/avatars/635400392594685964/f054c78d93f173f7dce74b55f1641358.png?size=2048")
-     .setURL(`${args}`);
+     .setURL(`${args}`) 
      .setThumbnail(message.author.avatarURL)
   .setFooter(`Commande invite`, message.author.avatarURL)
         message.channel.send(embed)
     }
+
 if (message.content.startsWith(prefix + "binfo")) {
             if (message.author.id === "631001858118516736") {
                 var binfos_embed = new Discord.RichEmbed()
