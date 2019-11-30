@@ -100,7 +100,7 @@ client.on('message', function (message) {
            if(message.content === prefix + "invite"){
        	message.delete()
         let embed = new Discord.RichEmbed()
-     .setTitle("Cliquez ici pour inviter le bot ! ADD ME FOR NITRO")
+     .setTitle("Cliquez ici pour inviter le bot ! ")
      .setAuthor("INVITATION")
      .setColor("RANDOM")
      .setImage("https://cdn.discordapp.com/avatars/635400392594685964/f054c78d93f173f7dce74b55f1641358.png?size=2048")
