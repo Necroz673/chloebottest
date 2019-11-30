@@ -744,7 +744,63 @@ if (message.content.startsWith(prefix + "8ball")) {
      
         }
       }
-      
+              //REVIEW mute
+        if (message.content.startsWith(prefix + "mute")) {
+            if (!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send(fryourperm);
+            if (!message.guild.member(client.user).hasPermission("ADMINISTRATOR")) return message.channel.send(frmyperm);
+
+            if (message.mentions.users.size === 0) {
+                return message.reply("Tu dois mentionner quelqu'un pour faire cette commande");
+            }
+            var mute = message.guild.member(message.mentions.users.first());
+            if (!mute) {
+                return message.reply("Je n'ai pas trouvé l'utilisateur ou il n'existe pas !");
+            }
+            if (message.content.substr(prefix.length + 4) === " <@515891064721244162>") {
+                return message.reply("Je ne peux pas me mute !");
+            }
+
+            if (message.guild.roles.filter(role => role.name.toLowerCase() === "muted").size !== 0) {
+                message.guild.members.get(mute.id).addRole(message.guild.roles.filter(role => role.name.toLowerCase() === "muted").first()).then(member => {
+                    message.channel.send(`${mute.user.username} a été mute par ${message.author.username} !`);
+
+
+                    log(`utilisation de la commande mute par ${message.guild.members.get(message.author.id).displayName}`, message.guild.id)
+                }).catch(e => message.reply("Impossibilité d'appliquer le role : vérifier l'ordre des roles, jeuxgate doit être au dessus de la personne à mute."))
+            } else {
+                message.reply("Aucun role \"muted\" trouvé.")
+            }
+
+        }
+
+        //REVIEW unmute
+        if (message.content.startsWith(prefix + "unmute")) {
+            if (!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("**Hey ...**Vous n'avez pas la permissions d'éxécuter cela !");
+            if (!message.guild.member(client.user).hasPermission("ADMINISTRATOR")) return message.channel.send("Je n'ai pas la permission !");
+
+            if (message.mentions.users.size === 0) {
+                return message.reply("Tu dois mentionner quelqu'un pour faire cette commande");
+            }
+            var mute = message.guild.member(message.mentions.users.first());
+            if (!mute) {
+                return message.reply("Je n'ai pas trouvé l'utilisateur ou il l'existe pas !");
+            }
+            if (message.content.substr(prefix.length + 6) === " <@515891064721244162>") {
+                return message.reply("Je ne peux pas me unmute !")
+            }
+
+            if (message.guild.roles.filter(role => role.name.toLowerCase() === "muted").size !== 0) {
+                message.guild.members.get(mute.id).removeRole(message.guild.roles.filter(role => role.name.toLowerCase() === "muted").first()).then(member => {
+                    message.channel.send(`${mute.user.username} a été dé-mute par ${message.author.username} !`);
+
+
+                    log(`utilisation de la commande mute par ${message.guild.members.get(message.author.id).displayName}`, message.guild.id)
+                }).catch(e => message.reply("Impossibilité d'appliquer le role : vérifier l'ordre des roles, jeuxgate doit être au dessus de la personne à mute."))
+            } else {
+                message.reply("Aucun role \"muted\" trouvé.")
+            }
+        }
+
       if(message.content.startsWith(prefix + "stream" )){
     if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("**:x: Vous n'avez pas la permission `ME MODIFIER` dans ce serveur**").catch(console.error);
             var args = message.content.split(' ').join(' ').slice(8);
