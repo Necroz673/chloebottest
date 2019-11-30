@@ -227,7 +227,7 @@ if (message.content.startsWith(prefix + "8ball")) {
                     .setColor('4f0982')
                     .addField(`Voici la réponse à vôtre question :`, ansball)
                     .setTimestamp()
-                    .setFooter("JeuxGate")
+                    .setFooter("NeCroz ")
                 message.channel.send(ball_embed);
 
 
