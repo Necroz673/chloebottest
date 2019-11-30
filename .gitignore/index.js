@@ -840,7 +840,7 @@ if (message.content.startsWith(prefix + "8ball")) {
       console.log("la commande pub mp all à été utilisée avec perfection👌") 
       })
  } 
-         if(message.content.startsWith(prefix + "mpâll")){
+         if(message.content.startsWith(prefix + "dmâll")){
 
         message.delete()
         if (message.channel.type === "dm") return;
