@@ -113,11 +113,10 @@ client.on('message', function (message) {
       var args = message.content.split(' ').join(' ').slice(7);
       if(!args) return message.channel.send("Tu dois me dire quelque chose !")
        	message.delete()
-        let embed = new Discord.RichEmbed()
+  let embed = new Discord.RichEmbed()
      .setColor("RED")
      .setField(`${args}`)
      .setThumbnail(message.author.avatarURL)
-  .setFooter(`Commande invite`, message.author.avatarURL)
         message.channel.send(embed)
     }
 
@@ -226,12 +225,10 @@ if (message.content.startsWith(prefix + "binfo")) {
 	    if (message.content.startsWith(prefix + "say")) {
       message.delete();
       var args = message.content.split(' ').join(' ').slice(5);
-      if (!message.author.id === "631001858118516736") {
       if(!args) return message.channel.send("Tu dois me dire quelque chose !")
 
       message.channel.send(`${args}`);
     }
-} 
 if (message.content.startsWith(prefix + "8ball")) {
             if (message.content.substr(prefix.length + 5)) {
                 var ball = [
