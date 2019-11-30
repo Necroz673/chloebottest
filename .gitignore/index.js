@@ -49,6 +49,8 @@ client.on('message', function (message) {
         .addField("**serv**", "``Faites /serv pour avoir plus d'informations sur le serveur !! ``")
         .addField("**warn**", "``Cette command vous permets de warn un utilisateur (l'avertir) ``") 
         .addField("**unwarn**", "``Cette command vous permets d'enlevé un nombre précis de warn``") 
+        .addField("**mute**", "``Sela vous permet de mute une personne (une rôle Muted dois être créé) ``") 
+        .addField("**unmute**", "``Sela vous permet de demute quelqu'un qui a été mute ``") 
         .addField("**seewarn**", "``Sela vous permets de voir tout les warn de l'utilisateur mentionner ``")
         .setFooter("Menu d'aide - modération")
         message.channel.send(help_embed);
