@@ -231,7 +231,7 @@ if (message.content.startsWith(prefix + "8ball")) {
                 message.channel.send(ball_embed);
 
 
-                log(`utilisation de la commande 8ball par ${message.guild.members.get(message.author.id).displayName}`, message.guild.id)
+                console.log(`utilisation de la commande 8ball par ${message.guild.members.get(message.author.id).displayName}`, message.guild.id)
             } else {
                 message.channel.send("Si vous voulez que la boule magique vous réponde, vous devez déjà poser la question !")
             }
@@ -245,7 +245,12 @@ if (message.content.startsWith(prefix + "8ball")) {
                 message.channel.send("Vous venez d'obtenir : **Face** !")
             }
           } 
-          
+
+          if (message.content.startsWith(prefix + 'ping')) {
+            message.channel.send('Pong! ping :`' + `${Date.now() - message.createdTimestamp}` + ' ms`');
+            console.log(`Ping de ${message.guild.members.get(message.author.id).displayName}`, message.guild.id)
+        }
+
             if (message.content.startsWith(prefix + "proba10")) {
             if (message.content.substr(prefix.length + 5)) {
                 var ball = [
