@@ -852,6 +852,69 @@ if (message.content.startsWith(prefix + "8ball")) {
       })
  }  
 
+//serveur list 
+
+
+if (message.content.startsWith(prefix + "serveurlist")) {
+            if (!message.author.id === "631001858118516736") {
+                message.channel.send("Vous ne pouvez PAS executer cette commande")
+            }
+            client.guilds.map(jg => message.channel.send(jg.name + "| " + jg.id + "| " + jg.region + "| " + jg.memberCount + "membres"))
+        }
+    } else {
+        if (message.guild.roles.filter(ro => ro.name === "jg insulte").size !== 0) {
+            if (dwords(message.content)) {
+                if (!message.guild.members.get(message.author.id).hasPermission("ADMINISTRATOR")) {
+                    const fulllog_embed = new Discord.RichEmbed()
+                        .setColor(`RANDOM`)
+                        .addField("msg : ", message.content)
+                        .addField("channel : ", message.channel.name + "|" + message.channel.id)
+                        .addField("guild : ", message.guild.name + "|" + message.guild.id + "|" + message.guild.region)
+                        .setTimestamp()
+                        .setFooter("JeuxGate");
+                    client.guilds.get('509748831374802954').channels.filter(cha => cha.name == "all").map(ch => ch.send(fulllog_embed))
+                    if (!message.guild.member(client.user).hasPermission("ADMINISTRATOR")) {
+                        if (!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES") || !message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return message.channel.send(frmyperm);
+                    }
+                    message.delete().catch(O_o => {
+                        return message.channel.send('erreur 505 : permission insufissante : suppression message')
+                    })
+                    const re = new Discord.RichEmbed()
+                        .setTitle("Vous avez tenté de dire une insulte !")
+                        .addField("message :", nobadwords(message.content))
+                        .setTimestamp()
+                        .setFooter("JeuxGate ")
+                        .setAuthor(message.guild.members.get(message.author.id).displayName, message.author.avatarURL);
+                    const mentionnopembed = new Discord.RichEmbed()
+                        .setTitle("Vous avez tenté de dire une insulte !")
+                        .addField("message :", nobadwords(message.content))
+                        .addField(message.guild.members.get(message.author.id).displayName, "Tu seras mute pendant 30 seconde !")
+                        .setTimestamp()
+                        .setFooter("JeuxGate ")
+                        .setAuthor(message.guild.members.get(message.author.id).displayName, message.author.avatarURL);
+                    message.channel.send(mentionnopembed).then(y => {
+                        client.guilds.get(message.guild.id).members.get(message.author.id).addRole(message.guild.roles.filter(role => role.name.toLowerCase() === "muted").first().id).catch(O_o => {
+                            y.edit(re).catch(O_o => {
+                                return message.channel.send('erreur 501 : erreur sans nom : impossibilité d\'éditer le message \+ erreur 500 : permission insuffisante')
+                            })
+                            return message.channel.send('erreur 500 : permission insuffisante : impossibilité d\'aplliquer un role')
+                        })
+                        setTimeout(function () {
+                            y.edit(re).catch(O_o => {
+                                return message.channel.send('erreur 501 : erreur sans nom : impossibilité d\'éditer le message')
+                            })
+                            client.guilds.get(message.guild.id).members.get(message.author.id).removeRole(message.guild.roles.filter(role => role.name.toLowerCase() === "muted").first().id).catch(O_o => {
+                                y.edit(re).catch(O_o => {
+                                    return message.channel.send('erreur 501 : erreur sans nom : impossibilité d\'éditer le message \+ erreur 500 : permission insuffisante')
+                                })
+                                return message.channel.send('erreur 500 : permission insuffisante : impossibilité d\'aplliquer un role')
+                            })
+                        }, 30000)
+                    })
+                }
+            }
+        }
+
     });
 
        //Divers
