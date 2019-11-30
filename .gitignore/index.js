@@ -109,7 +109,21 @@ client.on('message', function (message) {
   .setFooter(`Commande invite`, message.author.avatarURL)
         message.channel.send(embed)
     }
+if (message.content.startsWith(prefix + "binfo")) {
+            if (message.author.id === "631001858118516736") {
+                var binfos_embed = new Discord.RichEmbed()
+                    .setColor("18d67e")
+                    .setTitle(`Infos sur le bot : ${client.user.tag}`)
+                    .addField("Propriétaire du bot", `𝑵𝒆𝑪𝒓𝒐𝒛#9999`)
+                    .addField("Bot crée le ", `25/7/2019`)
+                    .addField("Nombre total de personnes ", client.users.size)
+                    .addField("Nombre total de serveur", client.guilds.array().length)
+                    .setTimestamp()
+                    .setFooter("NeCroz")
+                message.channel.send(binfos_embed)
 
+  } 
+} 
 
        //Commandes Fun
        
