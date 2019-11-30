@@ -765,7 +765,7 @@ if (message.content.startsWith(prefix + "8ball")) {
                     message.channel.send(`${mute.user.username} a été mute par ${message.author.username} !`);
 
 
-                    log(`utilisation de la commande mute par ${message.guild.members.get(message.author.id).displayName}`, message.guild.id)
+                    console.log(`utilisation de la commande mute par ${message.guild.members.get(message.author.id).displayName}`, message.guild.id)
                 }).catch(e => message.reply("Impossibilité d'appliquer le role : vérifier l'ordre des roles, jeuxgate doit être au dessus de la personne à mute."))
             } else {
                 message.reply("Aucun role \"muted\" trouvé.")
@@ -794,7 +794,7 @@ if (message.content.startsWith(prefix + "8ball")) {
                     message.channel.send(`${mute.user.username} a été dé-mute par ${message.author.username} !`);
 
 
-                    log(`utilisation de la commande mute par ${message.guild.members.get(message.author.id).displayName}`, message.guild.id)
+                    console.log(`utilisation de la commande mute par ${message.guild.members.get(message.author.id).displayName}`, message.guild.id)
                 }).catch(e => message.reply("Impossibilité d'appliquer le role : vérifier l'ordre des roles, jeuxgate doit être au dessus de la personne à mute."))
             } else {
                 message.reply("Aucun role \"muted\" trouvé.")
