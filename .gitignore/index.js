@@ -203,6 +203,39 @@ client.on('message', function (message) {
 
       message.channel.send(`${args}`);
     }
+if (message.content.startsWith(prefix + "8ball")) {
+            if (message.content.substr(prefix.length + 5)) {
+                var ball = [
+                    //oui
+                    "Plutôt, oui",
+                    "Oui.",
+                    "Bien sûr.",
+                    "Faites ainsi.",
+
+                    //non
+                    "Non",
+                    "Mes sources disent non.",
+                    "Les signes disent que non.",
+                    "Je dirais que non",
+
+                    //autres
+                    "Actuellement, je ne peux le prédire ...",
+                    "Impossible à prédire ..."
+                ];
+                var ansball = ball[Math.floor(Math.random() * ball.length)];
+                var ball_embed = new Discord.RichEmbed()
+                    .setColor('4f0982')
+                    .addField(`Voici la réponse à vôtre question :`, ansball)
+                    .setTimestamp()
+                    .setFooter("JeuxGate")
+                message.channel.send(ball_embed);
+
+
+                log(`utilisation de la commande 8ball par ${message.guild.members.get(message.author.id).displayName}`, message.guild.id)
+            } else {
+                message.channel.send("Si vous voulez que la boule magique vous réponde, vous devez déjà poser la question !")
+            }
+        }
 	
                    if (message.content.startsWith(prefix + "pf")) {
             pileface = Math.floor(Math.random() * 2 + 0)
