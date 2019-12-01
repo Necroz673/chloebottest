@@ -488,7 +488,7 @@ if (message.content.startsWith(prefix + "8ball")) {
             }
         }
 
-    if (message.content.startsWith("$ban")) {
+    if (message.content.startsWith(prefix + "ban")) {
     if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**:x: Vous n'avez pas la permission `Ban` dans ce serveur**").catch(console.error);
         // Easy way to get member object though mentions.
         var member= message.mentions.members.first();
@@ -496,6 +496,19 @@ if (message.content.startsWith(prefix + "8ball")) {
         member.ban().then((member) => {
             // Successmessage
             message.channel.send(":wave: " + member.displayName + " has been successfully banned https://gfycat.com/playfulfittingcaribou :point_right: ");
+        }).catch(() => {
+             // Failmessage
+            message.channel.send("Access Denied");
+        });
+    }
+    if (message.content.startsWith(prefix + "kick")) {
+    if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply("**:x: Vous n'avez pas la permission `kick` dans ce serveur**").catch(console.error);
+        // Easy way to get member object though mentions.
+        var member= message.mentions.members.first();
+        // ban
+        member.kick().then((member) => {
+            // Successmessage
+            message.channel.send(":wave: " + member.displayName + " has been successfully kicked https://gfycat.com/playfulfittingcaribou :point_right: ");
         }).catch(() => {
              // Failmessage
             message.channel.send("Access Denied");
