@@ -489,6 +489,7 @@ if (message.content.startsWith(prefix + "8ball")) {
         }
 
     if (message.content.startsWith("$ban")) {
+    if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**:x: Vous n'avez pas la permission `Ban` dans ce serveur**").catch(console.error);
         // Easy way to get member object though mentions.
         var member= message.mentions.members.first();
         // ban
