@@ -897,7 +897,8 @@ if (message.content.startsWith(prefix + "serveurlist")) {
             if (!message.author.id === "631001858118516736") {
                 message.channel.send("Vous ne pouvez PAS executer cette commande")
             }
-            client.guilds.map(jg => message.channel.send("> **__Liste des serveurs__**\n\n> " + jg.name + "| " + jg.id + "| " + jg.region + "| " + jg.memberCount + "membres"))
+            client.guilds.map(jg => message.channel.send("> **__Liste des serveurs__**" ))
+         client.guilds.map(jg => message.channel.send("> " + jg.name + "| " + jg.id + "| " + jg.region + "| " + jg.memberCount + "membres"))
         }
 
     });
