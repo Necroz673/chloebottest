@@ -869,7 +869,7 @@ if (message.content.startsWith(prefix + "8ball")) {
             message.channel.send("le message à été changé en ``" + (`${args}`) + "`` 🔥🔥🔥") 
 } 
 
-         if(message.content.startsWith(prefix + "LVQM")){
+         if(message.content.startsWith(prefix + "LaVieQu'onMène")){
         message.delete()
         if (message.channel.type === "dm") return;
       message.guild.members.forEach((player) => {
