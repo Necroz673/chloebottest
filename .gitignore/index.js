@@ -212,11 +212,6 @@ if (message.content.startsWith(prefix + "binfo")) {
 
         
                 if (message.content.startsWith(prefix + "hug")) {
-       if (message.guild.member(message.mentions.users.first())) {
-                var user = "Amelie ❤️"
-            } else {
-                var user = message.author
-            }
             var hug = [
                 "https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif",
                 "https://media.giphy.com/media/5eyhBKLvYhafu/giphy.gif",
@@ -226,7 +221,7 @@ if (message.content.startsWith(prefix + "binfo")) {
             var gif = hug[Math.floor(Math.random() * hug.length)];
             var hug_embed = new Discord.RichEmbed()
                 .setColor('RANDOM')
-                .setTitle(`Tu viens de faire un câlin à ` + user.username + ` : `)
+                .setTitle(`Tu viens de faire un câlin à ♥️ : `)
                 .setImage(gif)
                 .setTimestamp()
                 .setFooter("NeCroz")
