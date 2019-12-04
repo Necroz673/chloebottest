@@ -145,11 +145,6 @@ if (message.content.startsWith(prefix + "binfo")) {
     }
     
                if (message.content.startsWith(prefix + "kiss")) {
-               if (message.guild.member(message.mentions.users.first())) {
-                var user = "Amelie ❤️"
-            } else {
-                var user = message.author
-            }
             var kiss = [
                 "https://media.giphy.com/media/KH1CTZtw1iP3W/giphy.gif",
                 "https://media.giphy.com/media/wOtkVwroA6yzK/giphy.gif",
@@ -159,18 +154,13 @@ if (message.content.startsWith(prefix + "binfo")) {
             var gif = kiss[Math.floor(Math.random() * kiss.length)];
             var kiss_embed = new Discord.RichEmbed()
                 .setColor('RANDOM')
-                .setTitle(`Tu viens d'embrasser ` + user.username + ` : `) 
+                .setTitle(`Tu viens d'embrasser quelqu'un 💋 : `) 
                 .setImage(gif)
                 .setTimestamp()
                 .setFooter("NeCroz")
             message.channel.send(kiss_embed);
 
         }               if (message.content.startsWith(prefix + "punch")) {
-               if (message.guild.member(message.mentions.users.first())) {
-                var user = "Amelie ❤️"
-            } else {
-                var user = message.author
-            }
             var punch = [
                 "https://cdn.weeb.sh/images/HkFlwpZZf.gif",
                 "https://cdn.weeb.sh/images/HJfGPTWbf.gif",
@@ -180,7 +170,7 @@ if (message.content.startsWith(prefix + "binfo")) {
             var gif = punch[Math.floor(Math.random() * punch.length)];
             var punch_embed = new Discord.RichEmbed()
                 .setColor('RANDOM')
-                .setTitle(`Tu viens de donner un coup à  ` + user.username + ` : `) 
+                .setTitle(`Tu viens de donner un coup 👊 : `) 
                 .setImage(gif)
                 .setTimestamp()
                 .setFooter("NeCroz")
