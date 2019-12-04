@@ -167,7 +167,7 @@ if (message.content.startsWith(prefix + "binfo")) {
 
         }               if (message.content.startsWith(prefix + "punch")) {
                if (message.guild.member(message.mentions.users.first())) {
-                var user = "<@651760088574328842>"
+                var user = "Amelie ❤️"
             } else {
                 var user = message.author
             }
