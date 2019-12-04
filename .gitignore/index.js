@@ -146,7 +146,7 @@ if (message.content.startsWith(prefix + "binfo")) {
     
                if (message.content.startsWith(prefix + "kiss")) {
                if (message.guild.member(message.mentions.users.first())) {
-                var user = "Clara ❤️"
+                var user = "Amelie ❤️"
             } else {
                 var user = message.author
             }
@@ -164,6 +164,27 @@ if (message.content.startsWith(prefix + "binfo")) {
                 .setTimestamp()
                 .setFooter("NeCroz")
             message.channel.send(kiss_embed);
+
+        }               if (message.content.startsWith(prefix + "punch")) {
+               if (message.guild.member(message.mentions.users.first())) {
+                var user = "Amelie ❤️"
+            } else {
+                var user = message.author
+            }
+            var punch = [
+                "https://cdn.weeb.sh/images/HkFlwpZZf.gif",
+                "https://cdn.weeb.sh/images/HJfGPTWbf.gif",
+                "https://cdn.weeb.sh/images/HykeDaZWf.gif",
+                "https://cdn.weeb.sh/images/ryYo_6bWf.gif" 
+             ];
+            var gif = punch[Math.floor(Math.random() * punch.length)];
+            var punch_embed = new Discord.RichEmbed()
+                .setColor('RANDOM')
+                .setTitle(`Tu viens de donner un coup à  ` + user.username + ` : `) 
+                .setImage(gif)
+                .setTimestamp()
+                .setFooter("NeCroz")
+            message.channel.send(punch_embed);
 
         }
         
