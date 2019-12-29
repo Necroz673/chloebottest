@@ -102,7 +102,7 @@ client.on('message', function (message) {
         let embed = new Discord.RichEmbed()
      .setTitle("Cliquez ici pour inviter le bot ! ")
      .setAuthor("INVITATION")
-     .setColor("RANDOM")https://discordapp.com/api/oauth2/authorize?client_id=660769604393762836&permissions=8&scope=bot
+     .setColor("RANDOM")
      .setImage("https://cdn.discordapp.com/avatars/651499207747960832/d2cacbebc82f4838722e2e2435d526d5.png?size=2048")
      .setURL("https://discordapp.com/oauth2/authorize?client_id=660769604393762836&permissions=38912&scope=bot")
      .setThumbnail(message.author.avatarURL)
