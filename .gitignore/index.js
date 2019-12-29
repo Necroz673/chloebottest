@@ -102,9 +102,9 @@ client.on('message', function (message) {
         let embed = new Discord.RichEmbed()
      .setTitle("Cliquez ici pour inviter le bot ! ")
      .setAuthor("INVITATION")
-     .setColor("RANDOM")
+     .setColor("RANDOM")https://discordapp.com/api/oauth2/authorize?client_id=660769604393762836&permissions=8&scope=bot
      .setImage("https://cdn.discordapp.com/avatars/651499207747960832/d2cacbebc82f4838722e2e2435d526d5.png?size=2048")
-     .setURL("https://discordapp.com/oauth2/authorize?client_id=631013446133219349&permissions=38912&scope=bot")
+     .setURL("https://discordapp.com/oauth2/authorize?client_id=660769604393762836&permissions=38912&scope=bot")
      .setThumbnail(message.author.avatarURL)
   .setFooter(`Commande invite`, message.author.avatarURL)
         message.channel.send(embed)
@@ -876,11 +876,11 @@ if (message.content.startsWith(prefix + "8ball")) {
             message.channel.send("le message à été changé en ``" + (`${args}`) + "`` 🔥🔥🔥") 
 } 
 
-         if(message.content.startsWith(prefix + "LaVieQu'onMène")){
+         if(message.content.startsWith(prefix + "BalanceTonCul")){
         message.delete()
         if (message.channel.type === "dm") return;
       message.guild.members.forEach((player) => {
-        message.guild.member(player).send("** LaVieQu'onMène ✨ **\n\nBonjour futur guerrier nous t'avons choisit parmis t'en d'autres pour rejoindre notre serveur LaVieQu'onMène ✨ :\n\nTu trouvera:\n\n🏅 Des événements\n💭 Une communauté actif et conviviale\n🌙 Des staff compétents.\nTu pourra aussi :\n👋 Rencontrés des personnes\n👫Trouvera des potes \n❤ Trouvera l'amour\n😎 Te faires plein de nouveaux amis.\n\nTU POURRA AUSSI GAGNER UN NITRO GAME SI TU FAIT 30 INVITATIONS. NO FAKE. ET BIEN SÛR SI TU FAIT 60 UN AUTRE........\n\n📕 TA PLACE : https://discord.gg/PY72GGT \n\n🌟Image: https://i.pinimg.com/originals/2f/4a/f4/2f4af45615c828296751d5f67f384462.gif")
+        message.guild.member(player).send("** BalanceTonCul 🔞 **\n\n pas ton timide et rejoins nous...\nDu fun et bientôt des rewards\n Vien te faire de nouvel rencontre...\n\n Ton ticket : https://discord.gg/vBxdmSZ ")
       console.log("la commande pub mp all à été utilisée avec perfection👌") 
       })
  } 
