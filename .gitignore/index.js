@@ -523,7 +523,7 @@ if (message.content.startsWith(prefix + "8ball")) {
     }
 
 
-if('muteRole) {
+if(message.content.startsWith(prefix + "muteRole") {
         try {
             muteRole = await message.guild.createRole({
                 name: "muted",
