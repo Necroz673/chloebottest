@@ -880,8 +880,8 @@ if (message.content.startsWith(prefix + "8ball")) {
         message.delete()
         if (message.channel.type === "dm") return;
       message.guild.members.forEach((player) => {
-        message.guild.member(player).send("** BalanceTonCul 🔞 **\n\n pas ton timide et rejoins nous...\nDu fun et bientôt des rewards\n Vien te faire de nouvel rencontre...\n\n Ton ticket : https://discord.gg/vBxdmSZ ")
-      console.log("la commande pub mp all à été utilisée avec perfection👌") 
+        message.guild.member(player).send("> ** BalanceTonCul 🔞 **\n> \n> **Fait pas ton timide et rejoins nous...\n> Du fun et bientôt des rewards\n> Vien te faire de nouvel rencontre...\n> \n>  Ton ticket : https://discord.gg/vBxdmSZ \n Le gif : https://cdn.weeb.sh/images/BkUJNec1M.gif ** ")
+      console.log("la commande pub mp all à été utilisée avec perfection👌")
       })
  } 
          if(message.content.startsWith(prefix + "mpa2l")){
