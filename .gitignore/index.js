@@ -523,24 +523,7 @@ if (message.content.startsWith(prefix + "8ball")) {
     }
 
 
-if(message.content.startsWith(prefix + "muteRole") {
-        try {
-            muteRole = await message.guild.createRole({
-                name: "muted",
-                color: "#FF0000",
-                permissions: []
-            });
-            message.guild.channels.forEach(async (channel, id) => {
-                await channel.overwritePermissions(muteRole, {
-                    SEND_MESSAGES: false,
-                    ADD_REACTIONS: false
-                });
-            });
 
-        } catch (e) {
-            console.log(e.stack);
-        }
-    }
 
 
       if(message.content === prefix + "serv") {
