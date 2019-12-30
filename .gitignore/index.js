@@ -863,11 +863,10 @@ if (message.content.startsWith(prefix + "8ball")) {
         }
 
       if(message.content.startsWith(prefix + "stream" )){
-        if (!message.author.id === "631001858118516736") {
             var args = message.content.split(' ').join(' ').slice(8);
     
       if(!args) return message.channel.send("Tu dois me dire quelque chose !")
-
+if (!message.author.id === "631001858118516736") {
             client.user.setActivity((`${args}`), {
                 
                 type: "STREAMING",
