@@ -497,7 +497,7 @@ if (message.content.startsWith(prefix + "8ball")) {
 
   if(message.content.startsWith(prefix + "ban")){
     let bMember = message.guild.member(message.mentions.users.first() || message.client.users.find(u => u.username === argsMember)) ||
-    let embed = new Discord.MessageEmbed()
+    let embed = new Discord.RichEmbed()
     .setTitle("**💥💥💥**")
     .setColor("FF0000")
     .setDescription(`${bMember} a été ban`)
