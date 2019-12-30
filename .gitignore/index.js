@@ -495,17 +495,6 @@ if (message.content.startsWith(prefix + "8ball")) {
             }
         }
 
-  if(message.content.startsWith(prefix + "ban")){
-    let bMember = message.guild.member(message.mentions.users.first() || message.client.users.find(u => u.username === argsMember)) ||
-    var embed = new Discord.RichEmbed()
-    .setTitle("**💥💥💥**")
-    .setColor("FF0000")
-    .setDescription(`${bMember} a été ban`)
-    .setImage("https://media.giphy.com/media/eNGqdz7jVg3bn8o9SR/giphy.gif")
- 
-message.channel.sendMessage(embed)
-}
-
 
       if(message.content === prefix + "serv") {
       var server_embed = new Discord.RichEmbed()
