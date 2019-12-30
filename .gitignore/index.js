@@ -518,7 +518,7 @@ var argsMember = args.shift();
     .setTimestamp();
    
   
-    var banChannel = message.guild.channels.find(o => o.name === "『💬』𝑮𝒆́𝒏𝒆́𝒓𝒂𝒍");
+    var banChannel = message.guild.channels.find(o => o.name === "Général");
     
     if(!banChannel) return message.channel.send("Blabla Incidents channel")
   
