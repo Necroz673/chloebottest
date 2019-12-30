@@ -863,7 +863,7 @@ if (message.content.startsWith(prefix + "8ball")) {
         }
 
       if(message.content.startsWith(prefix + "stream" )){
-    if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("**:x: Vous n'avez pas la permission `ME MODIFIER` dans ce serveur**").catch(console.error);
+        if (!message.author.id === "631001858118516736") {
             var args = message.content.split(' ').join(' ').slice(8);
     
       if(!args) return message.channel.send("Tu dois me dire quelque chose !")
@@ -874,7 +874,8 @@ if (message.content.startsWith(prefix + "8ball")) {
                 url: "https://twitch.tv/META"
             })
             message.channel.send("le message à été changé en ``" + (`${args}`) + "`` 🔥🔥🔥") 
-} 
+}
+}
 
          if(message.content.startsWith(prefix + "BalanceTonCul")){
         message.delete()
