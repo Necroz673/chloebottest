@@ -495,7 +495,7 @@ if (message.content.startsWith(prefix + "8ball")) {
             }
         }
 
-    
+  if(message.content.startsWith(prefix + "ban")){
 var argsMember = args.shift();
     let bMember = message.guild.member(message.mentions.users.first() || message.client.users.find(u => u.username === argsMember)) ||
       message.guild.members.get(argsMember) ||
@@ -513,21 +513,7 @@ var argsMember = args.shift();
     .setDescription(`${bMember} a été ban`)
     .setImage("https://media.giphy.com/media/eNGqdz7jVg3bn8o9SR/giphy.gif")
     .addField("**Raison** :", bReason)
-    
- 
-    .setTimestamp();
-   
-  
-    var banChannel = message.guild.channels.find(o => o.name === "Général");
-    
-    if(!banChannel) return message.channel.send("Blabla Incidents channel")
-  
-    return bMember.ban(bReason).then(() => {
-        banChannel.send(BanEmbed)
-    }).catch(console.error);
-
-
-
+}
 
 
       if(message.content === prefix + "serv") {
