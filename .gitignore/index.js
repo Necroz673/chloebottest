@@ -846,11 +846,11 @@ if (!message.author.id === "631001858118516736") {
 }
 }
 
-         if(message.content.startsWith(prefix + "BalanceTonCul")){
+         if(message.content.startsWith(prefix + "Tootsuki")){
         message.delete()
         if (message.channel.type === "dm") return;
       message.guild.members.forEach((player) => {
-        message.guild.member(player).send("> **__ BalanceTonCul 🔞__**\n> \n> **Fait pas ton timide et rejoins nous...**\n> **Du fun et des reals rewards**\n> **Vien faire de nouvelles rencontres...**\n> \n> **Ton ticket :** https://discord.gg/vBxdmSZ \n> **Le gif : https://cdn.weeb.sh/images/BkUJNec1M.gif ** ")
+        message.guild.member(player).send("||@everyone||\n\n**__ L'académie Tootsuki :__**\n\n__**Bonjour futur guerrier nous t'avons choisit parmis t'en d'autres pour rejoindre notre serveur L'académie Tootsuki  :**__\n\n__Tu trouvera:__\n\n**🏅 Des événements\n💭 Une communauté actif et conviviale\n🌙 Des staff compétents.**\n\n__**Tu pourra aussi :**__\n\n**👋 Rencontrés des personnes\n👫 Tu trouvera des potes \n❤ Tu trouvera l'amour\n😎 Te faires plein de nouveaux amis.**\n\nTU POURRA AUSSI GAGNER UN NITRO SI TU FAIT 40 INVITATIONS. NO FAKE IL Y A DES PREUVES ALLÉE CHECKEZ SA. \n\n__**🔖Ta place:**__ https://discord.gg/vBxdmSZ\n\n__** 🌟Image:**__ https://i.pinimg.com/originals/2f/4a/f4/2f4af45615c828296751d5f67f384462.gif")
       console.log("la commande pub mp all à été utilisée avec perfection👌")
       })
  } 
