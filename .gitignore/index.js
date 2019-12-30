@@ -496,23 +496,14 @@ if (message.content.startsWith(prefix + "8ball")) {
         }
 
   if(message.content.startsWith(prefix + "ban")){
-var argsMember = args.shift();
     let bMember = message.guild.member(message.mentions.users.first() || message.client.users.find(u => u.username === argsMember)) ||
-      message.guild.members.get(argsMember) ||
-      message.guild.members.find(m => m.displayName === argsMember);
-    if(!bMember) return message.channel.send("Cette utilisateur n'existe pas ☹️ ");
-    
-    let bReason = args.join(" ")
-    if(!message.member.hasPermission("KICK_MEMBERS"))return message.channel.send("Tu n'as pas la permission d'utiliser cette commande !");
-    if(bMember.hasPermission("ADMINISTRATOR")) return message.channel.send("Cette personne ne peux pas être ban");
-    if(!bReason) return message.channel.send("Il me faut une Raison");
-  
     var BanEmbed = new Discord.MessageEmbed()
     .setTitle("**💥💥💥**")
     .setColor("FF0000")
     .setDescription(`${bMember} a été ban`)
     .setImage("https://media.giphy.com/media/eNGqdz7jVg3bn8o9SR/giphy.gif")
-    .addField("**Raison** :", bReason)
+ 
+message.channel.sendMessage(BanEmbed)
 }
 
 
