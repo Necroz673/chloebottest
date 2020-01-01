@@ -86,7 +86,7 @@ client.on('message', function (message) {
             message.delete() 
         var help_embed = new Discord.RichEmbed()
         .setColor('#0000CC')
-        .setThumbnail("https://i.pinimg.com/originals/9b/9e/40/9b9e40c61133e03d57c6ae6d185ebfe0.gif")
+        .setThumbnail("https://i.pinimg.com/originals/2f/4a/f4/2f4af45615c828296751d5f67f384462.gif")
         .setTitle("                                 ")
         .setDescription("Commandes social , utilisables par tous !")
         .addField("**instagram 📸**", "``Cette commande vous affichera le lien qui vous mènera sur la chaîne YouTube officiel de NeCroz!``")
