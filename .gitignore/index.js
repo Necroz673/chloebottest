@@ -103,7 +103,7 @@ client.on('message', function (message) {
      .setTitle("Cliquez ici pour inviter le bot ! ")
      .setAuthor("INVITATION")
      .setColor("RANDOM")
-     .setImage("https://cdn.discordapp.com/avatars/651499207747960832/d2cacbebc82f4838722e2e2435d526d5.png?size=2048")
+     .setImage("https://images-ext-2.discordapp.net/external/_eKqyAsU7o8A735YVMQScqBHpeL1K4n5stVv6MyoRVE/https/i.pinimg.com/originals/2f/4a/f4/2f4af45615c828296751d5f67f384462.gif")
      .setURL("https://discordapp.com/oauth2/authorize?client_id=661287392552026114&permissions=38912&scope=bot")
      .setThumbnail(message.author.avatarURL)
   .setFooter(`Commande invite`, message.author.avatarURL)
