@@ -104,7 +104,7 @@ client.on('message', function (message) {
      .setAuthor("INVITATION")
      .setColor("RANDOM")
      .setImage("https://images-ext-2.discordapp.net/external/_eKqyAsU7o8A735YVMQScqBHpeL1K4n5stVv6MyoRVE/https/i.pinimg.com/originals/2f/4a/f4/2f4af45615c828296751d5f67f384462.gif")
-     .setURL("https://discordapp.com/oauth2/authorize?client_id=661287392552026114&permissions=38912&scope=bot")
+     .setURL("https://discordapp.com/api/oauth2/authorize?client_id=661874635368824852&permissions=8&scope=bot")
      .setThumbnail(message.author.avatarURL)
   .setFooter(`Commande invite`, message.author.avatarURL)
         message.channel.send(embed)
