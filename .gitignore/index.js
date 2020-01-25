@@ -230,7 +230,8 @@ if (message.content.startsWith(prefix + "binfo")) {
        } 
 	
 	    if (message.content.startsWith(prefix + "say")) {
-      message.delete();
+      message.delete()
+      if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**:x: Vous n'avez pas la permission `ADMINISTRATOR` dans ce serveur**").catch(console.error);
       var args = message.content.split(' ').join(' ').slice(5);
       if(!args) return message.channel.send("Tu dois me dire quelque chose !")
 
