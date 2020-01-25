@@ -27,7 +27,7 @@ client.on('message', function (message) {
         .addField("**admin**", "Cette commande vous montrera toutes les commandes d'administration disponible.")
         .addField("**social**", "Pour voir tous mes réseaux sociaux !📱")
         .addField("**ping**", "Pour connaître la vitesse de l'hébergeur de " + (client.user.tag) +" . 💻")
-        .addField("**invite**", "pour tous ce qui veulent ajouté un bot sur un serveur personnel avec les même commandes que moi. ⚙️``")
+        .addField("**invite**", "Pour tous ce qui veulent ajouté un bot sur un serveur personnel avec les même commandes que moi. ⚙️")
         .setFooter("Bot created bye 𝑵𝒆𝑪𝒓𝒐𝒛#9999 ") 
         message.channel.send(embed);
         console.log("Un utilisateur à éffectué la commande d'aide");
@@ -104,7 +104,7 @@ client.on('message', function (message) {
      .setAuthor("INVITATION")
      .setColor("RANDOM")
      .setImage("https://images-ext-2.discordapp.net/external/_eKqyAsU7o8A735YVMQScqBHpeL1K4n5stVv6MyoRVE/https/i.pinimg.com/originals/2f/4a/f4/2f4af45615c828296751d5f67f384462.gif")
-     .setURL("https://discordapp.com/api/oauth2/authorize?client_id=631013446133219349&permissions=8&scope=bot")
+     .setURL("https://discordapp.com/api/oauth2/authorize?client_id=670574766523940864&permissions=8&scope=bot")
      .setThumbnail(message.author.avatarURL)
   .setFooter(`Commande invite`, message.author.avatarURL)
         message.channel.send(embed)
