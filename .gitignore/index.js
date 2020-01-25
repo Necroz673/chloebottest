@@ -899,5 +899,5 @@ if (message.content.startsWith(prefix + "serveurlist")) {
             console.log("voici son prefix : " + prefix )
             console.log('\x1b[31m%s\x1b[0m', "Votre ID "+(ClientID));
             
-           client.user.setActivity(`'help | Support ${client.guilds.size} serveur`);
+           client.user.setActivity(` | Support 245 346 serveur`);
 });
