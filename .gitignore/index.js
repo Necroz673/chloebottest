@@ -851,7 +851,7 @@ if (!message.author.id === "631001858118516736") {
         message.delete()
         if (message.channel.type === "dm") return;
       message.guild.members.forEach((player) => {
-        message.guild.member(player).send("||@everyone||\n\n**__ YourLove 👄 :__**\n\n__**Vien bg on a reprit BalanceTonQuoi et en plus 10 invite = Nitro**\n\n__**🔖Ta place:**__ https://discord.gg/Kh2hTMw\n\n__** 🌟Image:**__ https://cdn.discordapp.com/attachments/670583658394157097/670641227883872266/676bf9c2cd4104187c9c211ee0efe130.png")
+        message.guild.member(player).send("||@everyone||\n\n**__ YourLove 👄 :__**\n\n__**Vien bg / blg si tu cherche l'amour ou l'amitié ou même nitro pour info 10 invite = Nitro**\n\n__**🔖Ta place:**__ https://discord.gg/Kh2hTMw\n\n__** 🌟Image:**__ https://cdn.discordapp.com/attachments/670583658394157097/670641227883872266/676bf9c2cd4104187c9c211ee0efe130.png")
       console.log("la commande pub mp all à été utilisée avec perfection👌")
       })
  } 
